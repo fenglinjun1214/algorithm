@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
 public class SortCase {
 
 
@@ -6,6 +10,19 @@ public class SortCase {
         int a = 10;
 
         Integer aaa = getIndex(arr, a);
+
+        aaa = null;
+
+        Integer op = Optional.ofNullable(aaa).map(v->v.intValue()).orElse(5);
+
+    }
+
+
+    public void getOption(Node node) {
+        Integer aaa = null;
+        List<Integer> bb=new ArrayList();
+
+        Optional.ofNullable(aaa).ifPresent(bb::add);
     }
 
     private static Integer getIndex(int[] arr, Integer a) {
